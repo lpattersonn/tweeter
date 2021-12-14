@@ -1,0 +1,30 @@
+.class1 {
+  display: flex;
+    flex-direction: column;
+}
+.submit-button {
+
+  display: flex;
+    justify-content: space-between;
+}
+#tweet-text {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #f4f1ec;  
+  border-bottom: 3px black solid;
+}
+.submit {
+  font-family: "Bungee";
+  background-color: #4056a1;
+  color: white;
+}
+.counter {
+  font-family: "Bungee"
+}
+b {
+  font-weight: solid;
+}
+.text-fields {
+  font-weight: bold;
+}
