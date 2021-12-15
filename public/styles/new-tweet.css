@@ -1,17 +1,18 @@
+/* New Tweet Section */
+
 .class1 {
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
 }
 .submit-button {
-
   display: flex;
-    justify-content: space-between;
+  justify-content: space-between;
 }
 #tweet-text {
   width: 100%;
   border: none;
   outline: none;
-  background-color: #f4f1ec;  
+  background-color: #f4f1ec;
   border-bottom: 3px black solid;
 }
 .submit {
@@ -20,7 +21,7 @@
   color: white;
 }
 .counter {
-  font-family: "Bungee"
+  font-family: "Bungee";
 }
 b {
   font-weight: solid;
@@ -28,3 +29,41 @@ b {
 .text-fields {
   font-weight: bold;
 }
+
+/* Article */
+
+article {
+  width: 100%;
+  font-size: 15;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-style: solid;
+  background-color: #f4f1ec;
+  display: flex;
+  flex-direction: column;
+}
+.tweetheader {
+  font-size: 24px;
+  display: flex;
+  justify-content: left;
+}
+.tweetID {
+  display: flex;
+    flex-direction: row;
+}
+footer {
+  width: 90;
+  border-top: solid;
+  font-size: 5;
+}
+.tweetfooter {
+  font-size: 16px;
+}
+.article-haeder {
+  background-color: #f4f1ec;
+  padding-bottom: -20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
