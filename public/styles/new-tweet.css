@@ -42,28 +42,64 @@ article {
   display: flex;
   flex-direction: column;
 }
-.tweetheader {
-  font-size: 24px;
-  display: flex;
-  justify-content: left;
+article:hover {
+  border: solid;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  box-shadow: 3px 7px #969696de;
 }
-.tweetID {
-  display: flex;
-    flex-direction: row;
-}
-footer {
-  width: 90;
-  border-top: solid;
-  font-size: 5;
-}
-.tweetfooter {
-  font-size: 16px;
-}
-.article-haeder {
+.article-header {
   background-color: #f4f1ec;
   padding-bottom: -20px;
+  font-size: 24px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
+.tweetHeader {
+  font-size: 24px;
+  padding-right: 0.2em;
+}
+.tweetHandle {
+  font-size: 24px;
+  padding-right: 0.2em;
+  opacity: 0.2;
+}
+.tweetID {
+  display: flex;
+  flex-direction: row;
+}
+.imageSrc {
+  margin: 10px;
+}
+.tweetBody {
+  font-size: 24px;
+  padding-left: 0.9em;
+  padding-right: 0.9em;
+  display: flex;
+}
+.articleFooter {
+  width: 90;
+  border-top: solid;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.tweetfooter {
+  font-size: 17px;
+  padding-left: 1.3em;
+  padding-right: 1.3em;
+}
+.foot-div {
+  padding-right: 0.2em;
+}
+.fas {
+  font-size: 16px;
+  color: #4056a1;
+}
+.fas:hover {
+  font-size: 16px;
+  color: #d1ad4b;
+}

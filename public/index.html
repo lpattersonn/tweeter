@@ -41,20 +41,21 @@
 
     <!-- External Icons -->
     <script src="https://kit.fontawesome.com/fcb0e54b0f.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <h1 class="navheader">Write a new tweet <i class="fas fa-angle-double-down"></i></h1>
+      <h1 class="navheader">Write a new tweet <i id="headerArrow" class="fas fa-angle-double-down"></i></h1>
     </nav>
     <!-- Header -->
     <header id="main-header">
       <div class="class1">
         <img src="/images/profile-hex.png" />
       </div>
-      <br />
+      <br/>
       <div class="class2">
         <h2><strong>Oprah</strong> Winfrey</h2>
       </div>
@@ -79,21 +80,26 @@
       </section>
     </main>
       <!-- Tweet Container -->
-    <main>
+    <main id="tweets-container">
       <article>
-        <header class="article-haeder">
+        <header class="article-header">
         <div class="tweetID">
-          <img src="https://i.imgur.com/73hZDYK.png" alt="Male User" width="50" height="50"/>
-            <h1 class="tweetheader">Oprah Winfrey<h1>
+          <img class="imageSrc" src="https://i.imgur.com/73hZDYK.png" alt="Male User" width="50" height="50"/>
+            <h1 class="tweetHeader">Donald Duck<h1>
         </div>
-        <h1  class="tweetheader"> @Oprah</h1>
+        <h1  class="tweetHandle"> @Oprah</h1>
          </header>
-               <h1 class="tweetheader"> Hello World!</h1>
+               <h1 class="tweetBody"> Hello World!</h1>
         <footer> 
-          <h2 class= tweetfooter>10 Days ago</p>
-          <div class= "foot-div">
-
+          <div class="articleFooter">
+          <h1 class= tweetfooter>10 Days ago</h1>
+          <div class="foot-div">
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-retweet"></i>
+            <i class="fas fa-heart"></i>
           </div>
+        </div>
+        </div>
         </footer>
       </article>
     </main>
