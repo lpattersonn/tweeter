@@ -3,44 +3,9 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const data = [
-  {
-    user: {
-      name: "Newton",
-      avatars: "https://i.imgur.com/73hZDYK.png",
-      handle: "@SirIsaac",
-    },
-    content: {
-      text: "If I have seen further it is by standing on the shoulders of giants",
-    },
-    created_at: 1461116232227,
-  },
-  {
-    user: {
-      name: "Descartes",
-      avatars: "https://i.imgur.com/nlhLi3I.png",
-      handle: "@rd",
-    },
-    content: {
-      text: "Je pense , donc je suis",
-    },
-    created_at: 1461113959088,
-  },
-];
-
-const tweetData = {
-  user: {
-    name: "Newton",
-    avatars: "https://i.imgur.com/73hZDYK.png",
-    handle: "@SirIsaac",
-  },
-  content: {
-    text: "If I have seen further it is by standing on the shoulders of giants",
-  },
-  created_at: 1461116232227,
-};
 
 $(document).ready(function () {
+  // Templates for Tweets
   function createTweetElement(tweet) {
     let $tweet = $(`<article class="tweet">
   <header class="article-header">
@@ -50,7 +15,7 @@ $(document).ready(function () {
     } alt="Tiny App" width="50" height="50"/>
       <h1 class="tweetHeader">${tweet.user.name}<h1>
   </div>
-  <h1  class="tweetHandle"> ${tweet.user.handle}</h1>
+  <h1 class="tweetHandle"> ${tweet.user.handle}</h1>
    </header>
          <h1 class="tweetBody"> ${tweet.content.text}</h1>
   <footer> 
@@ -68,14 +33,46 @@ $(document).ready(function () {
     return $tweet;
   }
 
+  // Render Tweets
   function renderTweets(tweets) {
-    // loops through tweets
     for (let singleTweet of tweets) {
-      // calls createTweetElement for each tweet
       const $tweet = createTweetElement(singleTweet);
-      // takes return value and appends it to the tweets container
       $("#tweets-container").append($tweet);
     }
   }
-  renderTweets(data);
+
+  // Form Post Request Using Ajax
+  $("#newTweetForm").on("submit", function (event) {
+    event.preventDefault();
+    const content = $(this).serialize();
+    const verify = content.slice(5);
+    // Form Validation
+    if (verify.length === 0 || verify === null) {
+      alert("Tweet content is not present");
+    } else if (verify.length > 140) {
+      alert("Tweet content is too long");
+    } else {
+      $.ajax({
+        url: "http://localhost:8080/tweets",
+        method: "POST",
+        data: content,
+      })
+        .done((result) => {
+          loadtweets();
+        })
+        .fail((err) => console.log(err.message));
+    }
+  });
+
+  // Get Request from http://localhost:8080/tweets using AJAX
+  const loadtweets = function () {
+    $.ajax({
+      url: "/tweets/",
+      method: "GET",
+    })
+      .done(function (result) {
+        renderTweets(result.reverse());
+      })
+      .fail((err) => console.log(err.message));
+  };
 });

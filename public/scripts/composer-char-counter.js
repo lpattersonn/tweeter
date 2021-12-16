@@ -17,7 +17,7 @@ $(document).ready(function () {
   });
   $tweetText.on("keydown", function tweetIncreaseChar(e) {
     const key = e.key;
-    if (key === "Backspace" && tweetValue.value < 140) {
+    if (key === "Backspace" && (tweetValue.value) < 140) {
       tweetValue.value++;
     }
   });
