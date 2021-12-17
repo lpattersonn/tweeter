@@ -48,6 +48,8 @@ $(document).ready(function () {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
+  $("#no-content").hide();
+  $("#to-long").hide();
 
   // Form post request using Ajax
   $("#newTweetForm").on("submit", function (event) {
@@ -56,10 +58,14 @@ $(document).ready(function () {
     const verify = content.slice(5);
     // Form Validation
     if (verify.length === 0 || verify === null) {
-      alert("Tweet content is not present");
+      $("#to-long").slideUp("slow");
+      $("#no-content").slideDown("slow");
     } else if (verify.length > 140) {
-      alert("Tweet content is too long");
+      $("#no-content").slideUp("slow");
+      $("#to-long").slideDown("slow");
     } else {
+      $("#to-long").slideUp("slow");
+      $("#no-content").slideUp("slow");
       $.ajax({
         url: "http://localhost:8080/tweets",
         method: "POST",

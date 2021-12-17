@@ -102,3 +102,29 @@ article:hover {
   font-size: 16px;
   color: #d1ad4b;
 }
+
+/* JQuery Alert */
+#no-content {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #f4f1ec;
+  border-color: #a94442;
+  color: #a94442;
+  font-size: 30px;
+  display: flex;
+    justify-content: center;
+}
+#to-long {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #f4f1ec;
+  border-color: #a94442;
+  color: #a94442;
+  font-size: 30px;
+  display: flex;
+    justify-content: center;
+}
