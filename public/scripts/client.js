@@ -17,7 +17,7 @@ $(document).ready(function () {
   </div>
   <h1 class="tweetHandle"> ${tweet.user.handle}</h1>
    </header>
-         <h1 class="tweetBody"> ${tweet.content.text}</h1>
+         <h1 class="tweetBody"> ${escape(tweet.content.text)}</h1>
   <footer> 
     <div class="articleFooter">
     <h1 class= tweetfooter>${timeago.format(tweet.created_at)}</h1>
@@ -35,13 +35,21 @@ $(document).ready(function () {
 
   // Render Tweets
   function renderTweets(tweets) {
+    $("#tweets-container").empty();
     for (let singleTweet of tweets) {
       const $tweet = createTweetElement(singleTweet);
-      $("#tweets-container").append($tweet);
+      $("#tweets-container").prepend($tweet);
     }
   }
 
-  // Form Post Request Using Ajax
+  // Escape function
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+  // Form post request using Ajax
   $("#newTweetForm").on("submit", function (event) {
     event.preventDefault();
     const content = $(this).serialize();
@@ -71,8 +79,9 @@ $(document).ready(function () {
       method: "GET",
     })
       .done(function (result) {
-        renderTweets(result.reverse());
+        renderTweets(result);
       })
       .fail((err) => console.log(err.message));
   };
+  loadtweets();
 });
