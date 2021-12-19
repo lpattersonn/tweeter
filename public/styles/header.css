@@ -21,7 +21,7 @@
 /* Responsive Screen Breakpoints */
 
 /* Tablet: minimum width of 768px to maximum width of 1024px */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
   .responsive-header {
     margin-top: 40px;
     display: flex;
@@ -41,7 +41,7 @@
 }
 @media only screen and (min-width: 1024px) {
   .tweetHandle {
-  display: none;
+    display: none;
   }
   .responsive-header {
     margin-top: 40px;
