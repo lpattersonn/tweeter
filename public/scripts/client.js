@@ -3,7 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
 $(document).ready(function () {
   // Template for Tweets
   function createTweetElement(tweet) {
@@ -32,7 +31,6 @@ $(document).ready(function () {
 </article>`);
     return $tweet;
   }
-
   // Render Tweets
   function renderTweets(tweets) {
     $("#tweets-container").empty();
@@ -41,16 +39,14 @@ $(document).ready(function () {
       $("#tweets-container").prepend($tweet);
     }
   }
-
   // Escape function
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-  $("#no-content").hide();
-  $("#to-long").hide();
-
+  $("#no-content-error").hide();
+  $("#to-long-error").hide();
   // Form post request using Ajax
   $("#newTweetForm").on("submit", function (event) {
     event.preventDefault();
@@ -58,14 +54,14 @@ $(document).ready(function () {
     const verify = content.slice(5);
     // Form Validation
     if (verify.length === 0 || verify === null) {
-      $("#to-long").slideUp("slow");
-      $("#no-content").slideDown("slow");
+      $("#to-long-error").slideUp("slow");
+      $("#no-content-error").slideDown("slow");
     } else if (verify.length > 140) {
-      $("#no-content").slideUp("slow");
-      $("#to-long").slideDown("slow");
+      $("#no-content-error").slideUp("slow");
+      $("#to-long-error").slideDown("slow");
     } else {
-      $("#to-long").slideUp("slow");
-      $("#no-content").slideUp("slow");
+      $("#to-long-error").slideUp("slow");
+      $("#no-content-error").slideUp("slow");
       $.ajax({
         url: "http://localhost:8080/tweets",
         method: "POST",
@@ -77,7 +73,6 @@ $(document).ready(function () {
         .fail((err) => console.log(err.message));
     }
   });
-
   // Get Request from http://localhost:8080/tweets using AJAX
   const loadtweets = function () {
     $.ajax({

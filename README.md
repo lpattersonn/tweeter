@@ -4,9 +4,9 @@ Tweeter is a simple, single-page Twitter clone created using HTML, CSS, JS, JQue
 
 ## Final Project
 
-!["Screenshot of header"]()
+!["Screenshot of header"](https://github.com/lpattersonn/tweeter/blob/master/public/images/main-page.png?raw=true)
 
-!["Screenshot of tweets"]()
+!["Screenshot of tablet view"](https://github.com/lpattersonn/tweeter/blob/master/public/images/Teblet-page.png?raw=true)
 
 ## Dependencies
 
@@ -67,4 +67,3 @@ The nav was styled based on the following rules:
 ## Responsive Screen Layout
 
 - Implement responsive screen layout using Media Query (Layout Shifter) for tablets (768px to 1024px), and desktop (1024px and above) to complete the site.
-

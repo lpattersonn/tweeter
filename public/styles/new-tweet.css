@@ -28,7 +28,6 @@ b {
 .text-fields {
   font-weight: bold;
 }
-
 /* Article */
 article {
   width: 100%;
@@ -103,9 +102,8 @@ article:hover {
   font-size: 16px;
   color: #d1ad4b;
 }
-
 /* JQuery Alert */
-#no-content {
+#no-content-error {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -115,9 +113,9 @@ article:hover {
   color: #a94442;
   font-size: 30px;
   display: flex;
-    justify-content: center;
+  justify-content: center;
 }
-#to-long {
+#to-long-error {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -127,5 +125,5 @@ article:hover {
   color: #a94442;
   font-size: 30px;
   display: flex;
-    justify-content: center;
+  justify-content: center;
 }
