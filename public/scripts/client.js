@@ -5,22 +5,22 @@
  */
 
 $(document).ready(function () {
-  // Templates for Tweets
+  // Template for Tweets
   function createTweetElement(tweet) {
     let $tweet = $(`<article class="tweet">
   <header class="article-header">
-  <div class="tweetID">
+  <div class="tweet-ID">
     <img class="imageSrc" src=${
       tweet.user.avatars
     } alt="Tiny App" width="50" height="50"/>
-      <h1 class="tweetHeader">${tweet.user.name}<h1>
+      <h1 class="tweet-Header">${tweet.user.name}<h1>
   </div>
-  <h1 class="tweetHandle"> ${tweet.user.handle}</h1>
-   </header>
-         <h1 class="tweetBody"> ${escape(tweet.content.text)}</h1>
+  <h1 class="tweet-Handle"> ${tweet.user.handle}</h1>
+  </header>
+  <body> <h1 class="tweet-Body"> ${escape(tweet.content.text)}</h1> </body
   <footer> 
-    <div class="articleFooter">
-    <h1 class= tweetfooter>${timeago.format(tweet.created_at)}</h1>
+    <div class="article-Footer">
+    <h1 class= tweet-footer>${timeago.format(tweet.created_at)}</h1>
     <div class="foot-div">
       <i class="fas fa-flag"></i>
       <i class="fas fa-retweet"></i>

@@ -55,29 +55,32 @@ article:hover {
   flex-direction: row;
   justify-content: space-between;
 }
-.tweetHeader {
+.tweet-Header {
   font-size: 24px;
   padding-right: 0.2em;
 }
-.tweetHandle {
+.tweet-Handle {
   font-size: 24px;
   padding-right: 0.2em;
   opacity: 0.2;
 }
-.tweetID {
+.tweet-ID {
   display: flex;
   flex-direction: row;
 }
 .imageSrc {
   margin: 10px;
 }
-.tweetBody {
+.tweet-Body {
   font-size: 24px;
   padding-left: 0.9em;
   padding-right: 0.9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
   display: flex;
 }
-.articleFooter {
+.article-Footer {
   width: 90;
   border-top: solid;
   padding-bottom: 15px;
@@ -86,19 +89,17 @@ article:hover {
   justify-content: space-between;
   align-items: center;
 }
-.tweetfooter {
+.tweet-footer {
   font-size: 17px;
   padding-left: 1.3em;
   padding-right: 1.3em;
 }
-.foot-div {
-  padding-right: 0.2em;
-}
-.fas {
+.foot-div i {
   font-size: 16px;
   color: #4056a1;
+  padding-right: 0.2em;
 }
-.fas:hover {
+.foot-div i:hover {
   font-size: 16px;
   color: #d1ad4b;
 }

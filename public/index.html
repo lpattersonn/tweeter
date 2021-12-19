@@ -43,24 +43,27 @@
     <script src="https://kit.fontawesome.com/fcb0e54b0f.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
-
+  
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <h1 class="navheader">Write a new tweet <i id="headerArrow" class="fas fa-angle-double-down"></i></h1>
+      <div class="nav-right">
+      <div><b>Write</b> a new tweet</div>
+      <div id="arrow-icon"><i class="fas fa-angle-double-down"></i></div>
+    </div>
     </nav>
+    <div class="responsive-header">
     <!-- Header -->
     <header id="main-header">
       <div class="class1">
         <img src="/images/profile-hex.png" />
       </div>
-      <br/>
       <div class="class2">
-       <p class="user-name"> <b>Oprah</b> Winfrey </p>
+        <p class="user-name"><bold>Oprah</bold> Winfrey</p>
       </div>
     </header>
-
+<div>
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
@@ -84,5 +87,8 @@
       <!-- Tweet Container -->
     <main id="tweets-container">
     </main>
+  </div>
+  </div>
+  <div>
   </body>
 </html>
