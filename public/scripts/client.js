@@ -47,6 +47,7 @@ $(document).ready(function () {
   };
   $("#no-content-error").hide();
   $("#to-long-error").hide();
+  let tweetValue = $(".counter")[0];
   // Form post request using Ajax
   $("#newTweetForm").on("submit", function (event) {
     event.preventDefault();
@@ -69,6 +70,8 @@ $(document).ready(function () {
       })
         .done((result) => {
           loadtweets();
+          $("#tweet-text").val("");
+          tweetValue.value = 140;
         })
         .fail((err) => console.log(err.message));
     }
@@ -81,6 +84,7 @@ $(document).ready(function () {
     })
       .done(function (result) {
         renderTweets(result);
+        $("#tweet-text").val("");
       })
       .fail((err) => console.log(err.message));
   };
