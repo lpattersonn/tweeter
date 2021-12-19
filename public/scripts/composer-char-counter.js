@@ -8,18 +8,20 @@ $(document).ready(function () {
     if (this) {
       tweetValue.value--;
     }
-    if (tweetValue.value >= 0) {
-      $(".counter").css({ color: "black" });
-    }
-    if (tweetValue.value < 0) {
+    if (tweetValue.value < 0 ) {
       $(".counter").css({ color: "red" });
     }
+    if (tweetValue.value >= 0) {
+      $(".counter").css({ color: "black" });
+    } 
   });
   $tweetText.on("keydown", function tweetIncreaseChar(e) {
     const key = e.key;
     if (key === "Backspace" && (tweetValue.value) < 140) {
       tweetValue.value++;
-    }
+    } if (tweetValue.value >= 0) {
+      $(".counter").css({ color: "black" });
+    } 
   });
 });
 /* 
