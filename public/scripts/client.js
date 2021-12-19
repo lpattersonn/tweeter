@@ -84,7 +84,6 @@ $(document).ready(function () {
     })
       .done(function (result) {
         renderTweets(result);
-        $("#tweet-text").val("");
       })
       .fail((err) => console.log(err.message));
   };
