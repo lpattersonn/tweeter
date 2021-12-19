@@ -28,7 +28,7 @@ b {
 .text-fields {
   font-weight: bold;
 }
-/* Article */
+/* Article tag Styles*/
 article {
   width: 100%;
   font-size: 15;
@@ -102,7 +102,7 @@ article:hover {
   font-size: 16px;
   color: #d1ad4b;
 }
-/* JQuery Alert */
+/* JQuery Error Alert */
 #no-content-error {
   padding: 15px;
   margin-bottom: 20px;
