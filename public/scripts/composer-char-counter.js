@@ -3,9 +3,9 @@ $(document).ready(function () {
   const $tweetText = $("#tweet-text");
   let tweetValue = $(".counter")[0];
   tweetValue.value = 140;
-  $tweetText.on("keypress", function tweetReduceChar(e) {
+  $tweetText.on("input", function tweetReduceChar(e) {
     if (this) {
-      tweetValue.value--;
+      tweetValue.value = 140 - this.value.length;
     }
     if (tweetValue.value < 0) {
       $(".counter").css({ color: "red" });

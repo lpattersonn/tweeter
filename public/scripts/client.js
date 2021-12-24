@@ -47,12 +47,12 @@ $(document).ready(function () {
   };
   $("#no-content-error").hide();
   $("#to-long-error").hide();
-  let tweetValue = $(".counter")[0];
   // Form post request using Ajax
   $("#newTweetForm").on("submit", function (event) {
     event.preventDefault();
     const content = $(this).serialize();
     const verify = content.slice(5);
+    let tweetValue = $(".counter")[0];
     // Form Validation
     if (verify.length === 0 || verify === null) {
       $("#to-long-error").slideUp("slow");
